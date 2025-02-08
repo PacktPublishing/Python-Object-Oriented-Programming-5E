@@ -1,0 +1,31 @@
+[project]
+name = "ch_01"
+version = "2025.4.0"
+description = "Python 3 Object-Oriented Programming, 5th ed., Chapter 1"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["Python", "object-oriented design"]
+authors = [
+  {email = "slott56@gmail.com"},
+  {name = "Steven F. Lott"}
+]
+
+[tool.tox]
+requires = ["tox>=4.19"]
+env_list = ["3.13", "3.12", "type"]
+
+[tool.tox.env_run_base]
+description = "Run test suite under {base_python}"
+deps = ["pytest", "ruff"]
+commands = [
+  ["pytest"],
+  ["ruff", "check"]
+]
+
+[tool.tox.env.type]
+description = "run type check on code base"
+deps = ["pyright"]
+commands = [
+  ["pyright", "src"]
+]
+

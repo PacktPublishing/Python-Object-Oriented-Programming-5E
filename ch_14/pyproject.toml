@@ -1,0 +1,55 @@
+[project]
+name = "ch_14"
+version = "2025.4.0"
+description = "Python 3 Object-Oriented Programming, 5th ed., Chapter 14"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["Python", "object-oriented design"]
+authors = [
+  {email = "slott56@gmail.com"},
+  {name = "Steven F. Lott"}
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "pillow>=11.0.0",
+]
+
+[tool.tox]
+requires = ["tox>=4.19"]
+env_list = ["3.13", "3.12", "type"]
+
+[tool.tox.env_run_base]
+description = "Run test suite under {base_python}"
+deps = ["pytest", "ruff", "pytest-httpx"]
+set_env = {PYTHONHASHSEED = "42"}
+
+commands = [
+  ["pytest", "-v"],
+  ["pytest", "-v", "bonus"],
+  ["pytest", "--doctest-modules", "-vv", "src"],
+  ["ruff", "check", "--ignore", "E402,F811,E731"],
+]
+
+[tool.tox.env.type]
+description = "run type check on code base"
+deps = ["pyright", "mypy"]
+commands = [
+  ["pyright", "src"],
+  ["mypy", "src"],
+]
+
+[tool.tox.env.bench]
+commands = [
+  ["mypy", "benches", "--strict"],
+  ["python", "benches/time_to_write.py"]
+]
+
+[tool.mypy]
+show_error_codes = true
+strict = true
+python_version = "3.13"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest-httpx>=0.35.0",
+]

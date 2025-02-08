@@ -1,0 +1,822 @@
+{
+  "reportversion": "1",
+  "toxversion": "4.23.2",
+  "platform": "darwin",
+  "host": "macbookpro.attlocal.net",
+  "testenvs": {
+    "3.13": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          13,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=13)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "automobile_2-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "b8e8c6bbb4fab915046be4f01edc7a18d72d6806ea9416e71953fe79ae7e7011"
+      },
+      "installed_packages": [
+        "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/31/automobile_2-2.0-py3-none-any.whl",
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tox==4.23.2",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": true,
+        "exit_code": 0,
+        "duration": 1.561630199998035
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.13/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.13.0, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/Automobile-2/.tox/3.13/bin/python3\r\ncachedir: .tox/3.13/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/Automobile-2\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 3 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_Automobile-2.py::test_auto \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                                [ 33%]\u001b[0m\r\ntests/test_Automobile-2.py::test_garage \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 66%]\u001b[0m\r\ntests/test_Automobile-2.py::test_carwash \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                             [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.390064084000187,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83386.936257547,
+          "end": 83387.326321631
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.13/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "All checks passed!\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.7403244770102901,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83387.328263144,
+          "end": 83388.068587621
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "automobile-2@/Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/31/automobile_2-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.13.0 environment at .tox/3.13\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mautomobile-2==2.0                                                                                                                                                                                                                                                                                                \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 4ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 1ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/31/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/31/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/25/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/31/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.12577126499672886,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83386.768315458,
+          "end": 83386.894086723
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/31/automobile_2-2.0-py3-none-any.whl\r\ncachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntox==4.23.2\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.13.0 environment at .tox/3.13\r\n",
+          "retcode": 0,
+          "elapsed": 0.036028825998073444,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83386.89765249,
+          "end": 83386.933681316
+        }
+      ]
+    },
+    ".pkg": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          12,
+          5,
+          "final",
+          0
+        ],
+        "version": "3.12.5 (main, Aug 14 2024, 05:07:52) [Clang 18.1.8 ]",
+        "is_64": true,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installed_packages": [
+        "hatchling==1.25.0",
+        "packaging==24.1",
+        "pathspec==0.12.1",
+        "pluggy==1.5.0",
+        "trove-classifiers==2024.10.21.16"
+      ],
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command build_wheel with args {'wheel_directory': '/Users/slott/Documents/SomeApp/Automobile-2/.tox/.pkg/dist', 'config_settings': None, 'metadata_directory': None}\r\nBackend: Wrote response {'return': 'automobile_2-2.0-py3-none-any.whl'} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517_build_wheel-he8zdnuo.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.05893679200380575,
+          "show_on_standard": false,
+          "run_id": "build_wheel",
+          "start": 83386.703595802,
+          "end": 83386.762532594
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command _optional_hooks with args {}\r\nBackend: Wrote response {'return': {'get_requires_for_build_sdist': True, 'prepare_metadata_for_build_wheel': True, 'get_requires_for_build_wheel': True, 'build_editable': True, 'get_requires_for_build_editable': True, 'prepare_metadata_for_build_editable': True}} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517__optional_hooks-m0djum79.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.07512257000780664,
+          "show_on_standard": false,
+          "run_id": "_optional_hooks",
+          "start": 83386.518727494,
+          "end": 83386.593850064
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command get_requires_for_build_wheel with args {'config_settings': None}\r\nBackend: Wrote response {'return': []} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517_get_requires_for_build_wheel-xri9f4we.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.06829431200458203,
+          "show_on_standard": false,
+          "run_id": "get_requires_for_build_wheel",
+          "start": 83386.600692321,
+          "end": 83386.668986633
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "hatchling==1.25.0\r\npackaging==24.1\r\npathspec==0.12.1\r\npluggy==1.5.0\r\ntrove-classifiers==2024.10.21.16\r\n",
+          "err": "Using Python 3.12.5 environment at .tox/.pkg\r\n",
+          "retcode": 0,
+          "elapsed": 0.02935254700423684,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83386.671042527,
+          "end": 83386.700395074
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command _exit with args {}\r\nBackend: Wrote response {'return': 0} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517__exit-5lwsaoff.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.001489483009208925,
+          "show_on_standard": false,
+          "run_id": "_exit",
+          "start": 83394.597214767,
+          "end": 83394.59870425
+        }
+      ]
+    },
+    "3.12": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          12,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=12)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "automobile_2-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "b8e8c6bbb4fab915046be4f01edc7a18d72d6806ea9416e71953fe79ae7e7011"
+      },
+      "installed_packages": [
+        "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/32/automobile_2-2.0-py3-none-any.whl",
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tox==4.23.2",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": true,
+        "exit_code": 0,
+        "duration": 1.1336954449943732
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.12/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.12.5, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/Automobile-2/.tox/3.12/bin/python3\r\ncachedir: .tox/3.12/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/Automobile-2\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 3 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_Automobile-2.py::test_auto \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                                [ 33%]\u001b[0m\r\ntests/test_Automobile-2.py::test_garage \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 66%]\u001b[0m\r\ntests/test_Automobile-2.py::test_carwash \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                             [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.33113659599621315,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83388.226729083,
+          "end": 83388.557865679
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.12/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "All checks passed!\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.6421329360018717,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83388.559858717,
+          "end": 83389.201991653
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "automobile-2@/Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/32/automobile_2-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.12.5 environment at .tox/3.12\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mautomobile-2==2.0                                                                                                                                                                                                                                                                                                \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/32/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/32/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/26/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/32/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.11466407398984302,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83388.078485695,
+          "end": 83388.193149769
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/32/automobile_2-2.0-py3-none-any.whl\r\ncachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntox==4.23.2\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.12.5 environment at .tox/3.12\r\n",
+          "retcode": 0,
+          "elapsed": 0.028263407992199063,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83388.196180546,
+          "end": 83388.224443954
+        }
+      ]
+    },
+    "3.11": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          11,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=11)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "automobile_2-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "b8e8c6bbb4fab915046be4f01edc7a18d72d6806ea9416e71953fe79ae7e7011"
+      },
+      "installed_packages": [
+        "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/33/automobile_2-2.0-py3-none-any.whl",
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tox==4.23.2",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": true,
+        "exit_code": 0,
+        "duration": 1.3775950239942176
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.11/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.11.4, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/Automobile-2/.tox/3.11/bin/python3\r\ncachedir: .tox/3.11/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/Automobile-2\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 3 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_Automobile-2.py::test_auto \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                                [ 33%]\u001b[0m\r\ntests/test_Automobile-2.py::test_garage \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 66%]\u001b[0m\r\ntests/test_Automobile-2.py::test_carwash \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                             [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.4302376249979716,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83389.37428338,
+          "end": 83389.804521005
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.11/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "All checks passed!\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.7736660169903189,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83389.806408186,
+          "end": 83390.580074203
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "automobile-2@/Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/33/automobile_2-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.11.4 environment at .tox/3.11\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mautomobile-2==2.0                                                                                                                                                                                                                                                                                                \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/33/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/33/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/27/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/33/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.12898238899651915,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83389.213882643,
+          "end": 83389.342865032
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/33/automobile_2-2.0-py3-none-any.whl\r\ncachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntox==4.23.2\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.11.4 environment at .tox/3.11\r\n",
+          "retcode": 0,
+          "elapsed": 0.026172264988417737,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83389.345864179,
+          "end": 83389.372036444
+        }
+      ]
+    },
+    "3.10": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          10,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=10)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "automobile_2-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "b8e8c6bbb4fab915046be4f01edc7a18d72d6806ea9416e71953fe79ae7e7011"
+      },
+      "installed_packages": [
+        "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/34/automobile_2-2.0-py3-none-any.whl",
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "exceptiongroup==1.2.2",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tomli==2.0.2",
+        "tox==4.23.2",
+        "typing-extensions==4.12.2",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": true,
+        "exit_code": 0,
+        "duration": 1.3220192470034817
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.10/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.10.15, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/Automobile-2/.tox/3.10/bin/python3\r\ncachedir: .tox/3.10/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/Automobile-2\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 3 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_Automobile-2.py::test_auto \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                                [ 33%]\u001b[0m\r\ntests/test_Automobile-2.py::test_garage \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 66%]\u001b[0m\r\ntests/test_Automobile-2.py::test_carwash \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                             [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.3637999979982851,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83390.788534754,
+          "end": 83391.152334752
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.10/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "All checks passed!\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.7471173879894195,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83391.155023383,
+          "end": 83391.902140771
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "automobile-2@/Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/34/automobile_2-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.10.15 environment at .tox/3.10\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mautomobile-2==2.0                                                                                                                                                                                                                                                                                                \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 4ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 1ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/34/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/34/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/28/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/34/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.167520204995526,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83390.5898402,
+          "end": 83390.757360405
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/34/automobile_2-2.0-py3-none-any.whl\r\ncachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nexceptiongroup==1.2.2\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntomli==2.0.2\r\ntox==4.23.2\r\ntyping-extensions==4.12.2\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.10.15 environment at .tox/3.10\r\n",
+          "retcode": 0,
+          "elapsed": 0.025658498008851893,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83390.760103606,
+          "end": 83390.785762104
+        }
+      ]
+    },
+    "3.9": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          9,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=9)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "automobile_2-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "b8e8c6bbb4fab915046be4f01edc7a18d72d6806ea9416e71953fe79ae7e7011"
+      },
+      "installed_packages": [
+        "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/35/automobile_2-2.0-py3-none-any.whl",
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "exceptiongroup==1.2.2",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tomli==2.0.2",
+        "tox==4.23.2",
+        "typing-extensions==4.12.2",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": true,
+        "exit_code": 0,
+        "duration": 1.517007503003697
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.9/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.9.6, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/Automobile-2/.tox/3.9/bin/python3\r\ncachedir: .tox/3.9/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/Automobile-2\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 3 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_Automobile-2.py::test_auto \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                                [ 33%]\u001b[0m\r\ntests/test_Automobile-2.py::test_garage \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 66%]\u001b[0m\r\ntests/test_Automobile-2.py::test_carwash \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                             [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.02s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.3940378350089304,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83392.365283878,
+          "end": 83392.759321713
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.9/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "All checks passed!\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.6576821389899123,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83392.761809368,
+          "end": 83393.419491507
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "automobile-2@/Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/35/automobile_2-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.9.6 environment at .tox/3.9\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mautomobile-2==2.0                                                                                                                                                                                                                                                                                                \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 1ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/35/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/35/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/29/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/35/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.4195247500028927,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83391.912339,
+          "end": 83392.33186375
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/35/automobile_2-2.0-py3-none-any.whl\r\ncachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nexceptiongroup==1.2.2\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntomli==2.0.2\r\ntox==4.23.2\r\ntyping-extensions==4.12.2\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.9.6 environment at .tox/3.9\r\n",
+          "retcode": 0,
+          "elapsed": 0.02699255500920117,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83392.334534977,
+          "end": 83392.361527532
+        }
+      ]
+    },
+    "3.8": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          8,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=8)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "automobile_2-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "b8e8c6bbb4fab915046be4f01edc7a18d72d6806ea9416e71953fe79ae7e7011"
+      },
+      "installed_packages": [
+        "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/36/automobile_2-2.0-py3-none-any.whl",
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "exceptiongroup==1.2.2",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tomli==2.0.2",
+        "tox==4.23.2",
+        "typing-extensions==4.12.2",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": true,
+        "exit_code": 0,
+        "duration": 1.2062094590073684
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.8/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.8.20, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/Automobile-2/.tox/3.8/bin/python3\r\ncachedir: .tox/3.8/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/Automobile-2\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 3 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_Automobile-2.py::test_auto \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                                [ 33%]\u001b[0m\r\ntests/test_Automobile-2.py::test_garage \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 66%]\u001b[0m\r\ntests/test_Automobile-2.py::test_carwash \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                             [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.33684693499526475,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83393.643052511,
+          "end": 83393.979899446
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/Automobile-2/.tox/3.8/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "All checks passed!\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.6115069340012269,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83393.982406963,
+          "end": 83394.593913897
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "automobile-2@/Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/36/automobile_2-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.8.20 environment at .tox/3.8\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mautomobile-2==2.0                                                                                                                                                                                                                                                                                                \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 1ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/36/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mautomobile-2==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/36/automobile_2-2.0-py3-none-any.whl)                                                                               \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/30/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mautomobile-2\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/36/automobile_2-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.18369512999197468,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83393.428196377,
+          "end": 83393.611891507
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "automobile-2 @ file:///Users/slott/Documents/SomeApp/Automobile-2/.tox/.tmp/package/36/automobile_2-2.0-py3-none-any.whl\r\ncachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nexceptiongroup==1.2.2\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntomli==2.0.2\r\ntox==4.23.2\r\ntyping-extensions==4.12.2\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.8.20 environment at .tox/3.8\r\n",
+          "retcode": 0,
+          "elapsed": 0.026039661999675445,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83393.614803929,
+          "end": 83393.640843591
+        }
+      ]
+    },
+    "type": {}
+  }
+}

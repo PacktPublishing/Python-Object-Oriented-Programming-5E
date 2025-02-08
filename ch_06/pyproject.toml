@@ -1,0 +1,45 @@
+[project]
+name = "ch_06"
+version = "2025.4.0"
+description = "Python 3 Object-Oriented Programming, 5th ed., Chapter 6"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["Python", "object-oriented design"]
+authors = [
+  {email = "slott56@gmail.com"},
+  {name = "Steven F. Lott"}
+]
+dependencies = [
+    "jsonschema>=4.23.0",
+    "pyyaml>=6.0.2",
+    "werkzeug>=3.1.3",
+]
+
+[tool.tox]
+requires = ["tox>=4.19"]
+env_list = ["3.13", "3.12", "type"]
+
+[tool.tox.env_run_base]
+description = "Run test suite under {base_python}"
+deps = ["pytest", "ruff"]
+commands = [
+  ["pytest"],
+  ["pytest", "--doctest-modules", "-vv", "src"],
+  ["ruff", "check", "--ignore", "E402"],
+]
+
+[tool.tox.env.type]
+description = "run type check on code base"
+deps = ["pyright", "mypy"]
+commands = [
+  ["pyright", "src"],
+  ["mypy", "src"],
+]
+
+[tool.pyright]
+reportUnusedExpression = false
+include = ["src"]
+
+[tool.mypy]
+show_error_codes = true
+strict = true

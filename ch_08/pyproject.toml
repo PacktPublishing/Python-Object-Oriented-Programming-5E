@@ -1,0 +1,39 @@
+[project]
+name = "ch_08"
+version = "2025.4.0"
+description = "Python 3 Object-Oriented Programming, 5th ed., Chapter 8"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["Python", "object-oriented design"]
+authors = [
+  {email = "slott56@gmail.com"},
+  {name = "Steven F. Lott"}
+]
+
+[tool.tox]
+requires = ["tox>=4.19"]
+env_list = ["3.13", "3.12", "type"]
+
+[tool.tox.env_run_base]
+description = "Run test suite under {base_python}"
+deps = ["pytest", "ruff"]
+set_env = {PYTHONHASHSEED = "42"}
+
+commands = [
+  # ["pytest"],  # Nothing in tests
+  ["pytest", "--doctest-modules", "-vv", "src"],
+  ["ruff", "check", "--ignore", "E402,F811"],
+]
+
+[tool.tox.env.type]
+description = "run type check on code base"
+deps = ["pyright", "mypy"]
+commands = [
+  ["pyright", "src"],
+  ["mypy", "src"],
+]
+
+[tool.mypy]
+show_error_codes = true
+strict = true
+python_version = "3.13"

@@ -1,0 +1,822 @@
+{
+  "reportversion": "1",
+  "toxversion": "4.23.2",
+  "platform": "darwin",
+  "host": "macbookpro.attlocal.net",
+  "testenvs": {
+    "3.13": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          13,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=13)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "vehicleabstract-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "d9a29ee4c2c5919020fd09598f21c67e19d1cee0c712ebf890930196ecfd021d"
+      },
+      "installed_packages": [
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tox==4.23.2",
+        "vehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/25/vehicleabstract-2.0-py3-none-any.whl",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": false,
+        "exit_code": 1,
+        "duration": 1.5560886159946676
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.13/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.13.0, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.13/bin/python3\r\ncachedir: .tox/3.13/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/VehicleAbstract\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 2 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_VehicleAbstract.py::test_car \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 50%]\u001b[0m\r\ntests/test_VehicleAbstract.py::test_truck \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                            [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.03s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.4141043889976572,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83395.420246822,
+          "end": 83395.834351211
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.13/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m31\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m32\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m33\u001b[36m:\u001b[0m25\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                         ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m34\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m35\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m36\u001b[36m:\u001b[0m27\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                           ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\nFound 6 errors.\r\n[\u001b[36m*\u001b[0m] 6 fixable with the `--fix` option.\r\n",
+          "err": "",
+          "retcode": 1,
+          "elapsed": 0.7352374809997855,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83395.83647395,
+          "end": 83396.571711431
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "vehicleabstract@/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/25/vehicleabstract-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.13.0 environment at .tox/3.13\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mvehicleabstract==2.0                                                                                                                                                                                                                                                                                             \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/25/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/25/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/19/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/25/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.12604765300056897,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83395.261773225,
+          "end": 83395.387820878
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "cachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntox==4.23.2\r\nvehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/25/vehicleabstract-2.0-py3-none-any.whl\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.13.0 environment at .tox/3.13\r\n",
+          "retcode": 0,
+          "elapsed": 0.026657113994588144,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83395.391205743,
+          "end": 83395.417862857
+        }
+      ]
+    },
+    ".pkg": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          12,
+          5,
+          "final",
+          0
+        ],
+        "version": "3.12.5 (main, Aug 14 2024, 05:07:52) [Clang 18.1.8 ]",
+        "is_64": true,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installed_packages": [
+        "hatchling==1.25.0",
+        "packaging==24.1",
+        "pathspec==0.12.1",
+        "pluggy==1.5.0",
+        "trove-classifiers==2024.10.21.16"
+      ],
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command build_wheel with args {'wheel_directory': '/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.pkg/dist', 'config_settings': None, 'metadata_directory': None}\r\nBackend: Wrote response {'return': 'vehicleabstract-2.0-py3-none-any.whl'} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517_build_wheel-j7kphwfg.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.06069672200828791,
+          "show_on_standard": false,
+          "run_id": "build_wheel",
+          "start": 83395.196183436,
+          "end": 83395.256880158
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command _optional_hooks with args {}\r\nBackend: Wrote response {'return': {'get_requires_for_build_sdist': True, 'prepare_metadata_for_build_wheel': True, 'get_requires_for_build_wheel': True, 'build_editable': True, 'get_requires_for_build_editable': True, 'prepare_metadata_for_build_editable': True}} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517__optional_hooks-i3zf1unf.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.07154808800260071,
+          "show_on_standard": false,
+          "run_id": "_optional_hooks",
+          "start": 83395.025667957,
+          "end": 83395.097216045
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command get_requires_for_build_wheel with args {'config_settings': None}\r\nBackend: Wrote response {'return': []} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517_get_requires_for_build_wheel-0_gh2uyt.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.0586868220125325,
+          "show_on_standard": false,
+          "run_id": "get_requires_for_build_wheel",
+          "start": 83395.101074286,
+          "end": 83395.159761108
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "hatchling==1.25.0\r\npackaging==24.1\r\npathspec==0.12.1\r\npluggy==1.5.0\r\ntrove-classifiers==2024.10.21.16\r\n",
+          "err": "Using Python 3.12.5 environment at .tox/.pkg\r\n",
+          "retcode": 0,
+          "elapsed": 0.030494987993733957,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83395.161534476,
+          "end": 83395.192029464
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.pkg/bin/python",
+            "/Users/slott/.local/share/uv/tools/tox/lib/python3.12/site-packages/pyproject_api/_backend.py",
+            "True",
+            "hatchling.build"
+          ],
+          "output": "Backend: run command _exit with args {}\r\nBackend: Wrote response {'return': 0} to /var/folders/sv/rwr46wqj3dbb_m803gvs3pv40000gq/T/pep517__exit-jhp0j45l.json\r\n",
+          "err": "",
+          "retcode": null,
+          "elapsed": 0.00144309300230816,
+          "show_on_standard": false,
+          "run_id": "_exit",
+          "start": 83403.276263985,
+          "end": 83403.277707078
+        }
+      ]
+    },
+    "3.12": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          12,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=12)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "vehicleabstract-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "d9a29ee4c2c5919020fd09598f21c67e19d1cee0c712ebf890930196ecfd021d"
+      },
+      "installed_packages": [
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tox==4.23.2",
+        "vehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/26/vehicleabstract-2.0-py3-none-any.whl",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": false,
+        "exit_code": 1,
+        "duration": 1.2484215840086108
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.12/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.12.5, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.12/bin/python3\r\ncachedir: .tox/3.12/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/VehicleAbstract\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 2 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_VehicleAbstract.py::test_car \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 50%]\u001b[0m\r\ntests/test_VehicleAbstract.py::test_truck \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                            [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.3576629550079815,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83396.728271142,
+          "end": 83397.085934097
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.12/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m31\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m32\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m33\u001b[36m:\u001b[0m25\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                         ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m34\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m35\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m36\u001b[36m:\u001b[0m27\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                           ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\nFound 6 errors.\r\n[\u001b[36m*\u001b[0m] 6 fixable with the `--fix` option.\r\n",
+          "err": "",
+          "retcode": 1,
+          "elapsed": 0.7315493499918375,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83397.087820632,
+          "end": 83397.819369982
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "vehicleabstract@/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/26/vehicleabstract-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.12.5 environment at .tox/3.12\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mvehicleabstract==2.0                                                                                                                                                                                                                                                                                             \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 4ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/26/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/26/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/20/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/26/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.11643889600236434,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83396.58113613,
+          "end": 83396.697575026
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "cachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntox==4.23.2\r\nvehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/26/vehicleabstract-2.0-py3-none-any.whl\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.12.5 environment at .tox/3.12\r\n",
+          "retcode": 0,
+          "elapsed": 0.025635302008595318,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83396.700321655,
+          "end": 83396.725956957
+        }
+      ]
+    },
+    "3.11": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          11,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=11)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "vehicleabstract-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "d9a29ee4c2c5919020fd09598f21c67e19d1cee0c712ebf890930196ecfd021d"
+      },
+      "installed_packages": [
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tox==4.23.2",
+        "vehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/27/vehicleabstract-2.0-py3-none-any.whl",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": false,
+        "exit_code": 1,
+        "duration": 1.172798049999983
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.11/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.11.4, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.11/bin/python3\r\ncachedir: .tox/3.11/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/VehicleAbstract\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 2 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_VehicleAbstract.py::test_car \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 50%]\u001b[0m\r\ntests/test_VehicleAbstract.py::test_truck \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                            [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.3670637710019946,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83397.993057407,
+          "end": 83398.360121178
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.11/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m31\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m32\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m33\u001b[36m:\u001b[0m25\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                         ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m34\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m35\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m36\u001b[36m:\u001b[0m27\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                           ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\nFound 6 errors.\r\n[\u001b[36m*\u001b[0m] 6 fixable with the `--fix` option.\r\n",
+          "err": "",
+          "retcode": 1,
+          "elapsed": 0.6294714450050378,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83398.363626212,
+          "end": 83398.993097657
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "vehicleabstract@/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/27/vehicleabstract-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.11.4 environment at .tox/3.11\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mvehicleabstract==2.0                                                                                                                                                                                                                                                                                             \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 4ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 1ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/27/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/27/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/21/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/27/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.13006729100015946,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83397.830657419,
+          "end": 83397.96072471
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "cachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntox==4.23.2\r\nvehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/27/vehicleabstract-2.0-py3-none-any.whl\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.11.4 environment at .tox/3.11\r\n",
+          "retcode": 0,
+          "elapsed": 0.0261381199961761,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83397.96357419,
+          "end": 83397.98971231
+        }
+      ]
+    },
+    "3.10": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          10,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=10)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "vehicleabstract-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "d9a29ee4c2c5919020fd09598f21c67e19d1cee0c712ebf890930196ecfd021d"
+      },
+      "installed_packages": [
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "exceptiongroup==1.2.2",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tomli==2.0.2",
+        "tox==4.23.2",
+        "typing-extensions==4.12.2",
+        "vehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/28/vehicleabstract-2.0-py3-none-any.whl",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": false,
+        "exit_code": 1,
+        "duration": 1.2665131370013114
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.10/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.10.15, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.10/bin/python3\r\ncachedir: .tox/3.10/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/VehicleAbstract\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 2 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_VehicleAbstract.py::test_car \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 50%]\u001b[0m\r\ntests/test_VehicleAbstract.py::test_truck \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                            [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.36809268599608913,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83399.214364898,
+          "end": 83399.582457584
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.10/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m31\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m32\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m33\u001b[36m:\u001b[0m25\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                         ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m34\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m35\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m36\u001b[36m:\u001b[0m27\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                           ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\nFound 6 errors.\r\n[\u001b[36m*\u001b[0m] 6 fixable with the `--fix` option.\r\n",
+          "err": "",
+          "retcode": 1,
+          "elapsed": 0.6748766679957043,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83399.584663591,
+          "end": 83400.259540259
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "vehicleabstract@/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/28/vehicleabstract-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.10.15 environment at .tox/3.10\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mvehicleabstract==2.0                                                                                                                                                                                                                                                                                             \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/28/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/28/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/22/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/28/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.17459022099501453,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83399.003323125,
+          "end": 83399.177913346
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "cachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nexceptiongroup==1.2.2\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntomli==2.0.2\r\ntox==4.23.2\r\ntyping-extensions==4.12.2\r\nvehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/28/vehicleabstract-2.0-py3-none-any.whl\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.10.15 environment at .tox/3.10\r\n",
+          "retcode": 0,
+          "elapsed": 0.03101085299567785,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83399.180956921,
+          "end": 83399.211967774
+        }
+      ]
+    },
+    "3.9": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          9,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=9)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "vehicleabstract-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "d9a29ee4c2c5919020fd09598f21c67e19d1cee0c712ebf890930196ecfd021d"
+      },
+      "installed_packages": [
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "exceptiongroup==1.2.2",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tomli==2.0.2",
+        "tox==4.23.2",
+        "typing-extensions==4.12.2",
+        "vehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/29/vehicleabstract-2.0-py3-none-any.whl",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": false,
+        "exit_code": 1,
+        "duration": 1.6459131070005242
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.9/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.9.6, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.9/bin/python3\r\ncachedir: .tox/3.9/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/VehicleAbstract\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 2 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_VehicleAbstract.py::test_car \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 50%]\u001b[0m\r\ntests/test_VehicleAbstract.py::test_truck \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                            [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.43124522299331147,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83400.742054368,
+          "end": 83401.173299591
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.9/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m31\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m32\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m33\u001b[36m:\u001b[0m25\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                         ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m34\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m35\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m36\u001b[36m:\u001b[0m27\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                           ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\nFound 6 errors.\r\n[\u001b[36m*\u001b[0m] 6 fixable with the `--fix` option.\r\n",
+          "err": "",
+          "retcode": 1,
+          "elapsed": 0.7294866450101836,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83401.176299163,
+          "end": 83401.905785808
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "vehicleabstract@/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/29/vehicleabstract-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.9.6 environment at .tox/3.9\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mvehicleabstract==2.0                                                                                                                                                                                                                                                                                             \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/29/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/29/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/23/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/29/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.4385524289973546,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83400.270694468,
+          "end": 83400.709246897
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "cachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nexceptiongroup==1.2.2\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntomli==2.0.2\r\ntox==4.23.2\r\ntyping-extensions==4.12.2\r\nvehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/29/vehicleabstract-2.0-py3-none-any.whl\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.9.6 environment at .tox/3.9\r\n",
+          "retcode": 0,
+          "elapsed": 0.026220161991659552,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83400.712439704,
+          "end": 83400.738659866
+        }
+      ]
+    },
+    "3.8": {
+      "python": {
+        "implementation": "CPython",
+        "version_info": [
+          3,
+          8,
+          null,
+          "",
+          0
+        ],
+        "version": "PythonSpec(major=3, minor=8)",
+        "is_64": false,
+        "sysplatform": "darwin",
+        "extra_version_info": null
+      },
+      "installpkg": {
+        "basename": "vehicleabstract-2.0-py3-none-any.whl",
+        "type": "file",
+        "sha256": "d9a29ee4c2c5919020fd09598f21c67e19d1cee0c712ebf890930196ecfd021d"
+      },
+      "installed_packages": [
+        "cachetools==5.5.0",
+        "chardet==5.2.0",
+        "colorama==0.4.6",
+        "distlib==0.3.9",
+        "exceptiongroup==1.2.2",
+        "filelock==3.16.1",
+        "iniconfig==2.0.0",
+        "packaging==24.1",
+        "platformdirs==4.3.6",
+        "pluggy==1.5.0",
+        "pyproject-api==1.8.0",
+        "pytest==8.3.3",
+        "ruff==0.7.2",
+        "tomli==2.0.2",
+        "tox==4.23.2",
+        "typing-extensions==4.12.2",
+        "vehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/30/vehicleabstract-2.0-py3-none-any.whl",
+        "virtualenv==20.27.1"
+      ],
+      "result": {
+        "success": false,
+        "exit_code": 1,
+        "duration": 1.3901172919868259
+      },
+      "test": [
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.8/bin/pytest",
+            "--color=yes",
+            "-x",
+            "-vv",
+            "tests"
+          ],
+          "output": "\u001b[1m=============================================================================================================================================== test session starts ===============================================================================================================================================\u001b[0m\r\nplatform darwin -- Python 3.8.20, pytest-8.3.3, pluggy-1.5.0 -- /Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.8/bin/python3\r\ncachedir: .tox/3.8/.pytest_cache\r\nrootdir: /Users/slott/Documents/SomeApp/VehicleAbstract\r\nconfigfile: pyproject.toml\r\n\u001b[1mcollecting ... \u001b[0m\u001b[1m\rcollected 2 items                                                                                                                                                                                                                                                                                                 \u001b[0m\r\n\r\ntests/test_VehicleAbstract.py::test_car \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                              [ 50%]\u001b[0m\r\ntests/test_VehicleAbstract.py::test_truck \u001b[32mPASSED\u001b[0m\u001b[32m                                                                                                                                                                                                                                                            [100%]\u001b[0m\r\n\r\n\u001b[32m================================================================================================================================================ \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.01s\u001b[0m\u001b[32m ================================================================================================================================================\u001b[0m\r\n",
+          "err": "",
+          "retcode": 0,
+          "elapsed": 0.356032611001865,
+          "show_on_standard": true,
+          "run_id": "commands[0]",
+          "start": 83402.144151772,
+          "end": 83402.500184383
+        },
+        {
+          "command": [
+            "/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/3.8/bin/ruff",
+            "check",
+            "--ignore",
+            "E402,F405,F403,E701",
+            "src"
+          ],
+          "output": "\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m31\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m32\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m30 |\u001b[0m     def drive(self):\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m33\u001b[36m:\u001b[0m25\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m31 |\u001b[0m         self.start_engine();\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                         ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m34\u001b[36m:\u001b[0m26\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m32 |\u001b[0m         self.accelerate();\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                          ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m35\u001b[36m:\u001b[0m28\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m33 |\u001b[0m         self.turn_left();\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                            ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\n\u001b[1msrc/motorvehicle.py\u001b[0m\u001b[36m:\u001b[0m36\u001b[36m:\u001b[0m27\u001b[36m:\u001b[0m \u001b[1;31mE703\u001b[0m [\u001b[36m*\u001b[0m] Statement ends with an unnecessary semicolon\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n\u001b[1;38;5;12m34 |\u001b[0m         self.turn_right();\r\n\u001b[1;38;5;12m35 |\u001b[0m         self.apply_brakes();\r\n\u001b[1;38;5;12m36 |\u001b[0m         self.stop_engine();\r\n\u001b[1;38;5;12m   |\u001b[0m\u001b[1;38;5;9m                           ^\u001b[0m \u001b[1;38;5;9mE703\u001b[0m\r\n\u001b[1;38;5;12m   |\u001b[0m\r\n   \u001b[1;38;5;12m=\u001b[0m \u001b[1;38;5;14mhelp\u001b[0m: Remove unnecessary semicolon\r\n\r\nFound 6 errors.\r\n[\u001b[36m*\u001b[0m] 6 fixable with the `--fix` option.\r\n",
+          "err": "",
+          "retcode": 1,
+          "elapsed": 0.7711661740031559,
+          "show_on_standard": true,
+          "run_id": "commands[1]",
+          "start": 83402.502120929,
+          "end": 83403.273287103
+        }
+      ],
+      "setup": [
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "pip",
+            "install",
+            "--reinstall",
+            "--no-deps",
+            "vehicleabstract@/Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/30/vehicleabstract-2.0-py3-none-any.whl"
+          ],
+          "output": "",
+          "err": "\u001b[2mUsing Python 3.8.20 environment at .tox/3.8\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mResolving dependencies...                                                                                                                                                                                                                                                                                        \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mvehicleabstract==2.0                                                                                                                                                                                                                                                                                             \u001b[0m\r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m                                                                                                                                                                                                                                                                                                                 \u001b[0m\r\u001b[2K\u001b[2mResolved \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/0)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠋\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2mPreparing packages...\u001b[0m (0/1)                                                                                                                                                                                                                                                                                      \r\u001b[2K\u001b[37m⠙\u001b[0m \u001b[2m\u001b[0m (1/1)                                                                                                                                                                                                                                                                                                           \r\u001b[2K\u001b[2mPrepared \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n\u001b[2mUninstalled \u001b[1m1 package\u001b[0m \u001b[2min 2ms\u001b[0m\u001b[0m\r\n░░░░░░░░░░░░░░░░░░░░ [0/0] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mInstalling wheels...                                                                                                                                                                                                                                                                    \u001b[0m\r\u001b[2K░░░░░░░░░░░░░░░░░░░░ [0/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/30/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K████████████████████ [1/1] \u001b[2mvehicleabstract==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/30/vehicleabstract-2.0-py3-none-any.whl)                                                                      \u001b[0m\r\u001b[2K\u001b[2mInstalled \u001b[1m1 package\u001b[0m \u001b[2min 3ms\u001b[0m\u001b[0m\r\n \u001b[31m-\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/24/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n \u001b[32m+\u001b[39m \u001b[1mvehicleabstract\u001b[0m\u001b[2m==2.0 (from file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/30/vehicleabstract-2.0-py3-none-any.whl)\u001b[0m\r\n",
+          "retcode": 0,
+          "elapsed": 0.1948770750022959,
+          "show_on_standard": false,
+          "run_id": "install_package",
+          "start": 83401.914782656,
+          "end": 83402.109659731
+        },
+        {
+          "command": [
+            "/Users/slott/.local/share/uv/tools/tox/bin/uv",
+            "--color",
+            "never",
+            "pip",
+            "freeze"
+          ],
+          "output": "cachetools==5.5.0\r\nchardet==5.2.0\r\ncolorama==0.4.6\r\ndistlib==0.3.9\r\nexceptiongroup==1.2.2\r\nfilelock==3.16.1\r\niniconfig==2.0.0\r\npackaging==24.1\r\nplatformdirs==4.3.6\r\npluggy==1.5.0\r\npyproject-api==1.8.0\r\npytest==8.3.3\r\nruff==0.7.2\r\ntomli==2.0.2\r\ntox==4.23.2\r\ntyping-extensions==4.12.2\r\nvehicleabstract @ file:///Users/slott/Documents/SomeApp/VehicleAbstract/.tox/.tmp/package/30/vehicleabstract-2.0-py3-none-any.whl\r\nvirtualenv==20.27.1\r\n",
+          "err": "Using Python 3.8.20 environment at .tox/3.8\r\n",
+          "retcode": 0,
+          "elapsed": 0.027379355000448413,
+          "show_on_standard": false,
+          "run_id": "freeze",
+          "start": 83402.112999174,
+          "end": 83402.140378529
+        }
+      ]
+    },
+    "type": {}
+  }
+}

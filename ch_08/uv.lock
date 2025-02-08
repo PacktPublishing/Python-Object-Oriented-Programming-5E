@@ -1,0 +1,7 @@
+version = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "ch-08"
+version = "2025.4.0"
+source = { virtual = "." }
