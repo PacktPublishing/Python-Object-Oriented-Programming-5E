@@ -3,7 +3,7 @@ Python 3 Object-Oriented Programming 4th ed.
 
 Chapter 2, Objects in Python.
 """
-
+from __future__ import annotations
 import math
 
 
@@ -17,7 +17,7 @@ class Point:
     5.0
     """
 
-    def __init__(self, x: float = 0, y: float = 0) -> None:
+    def __init__(self, x: float = 0.0, y: float = 0.0) -> None:
         """
         Initialize the position of a new point. The x and y
         coordinates can be specified. If they are not, the
@@ -42,9 +42,9 @@ class Point:
         """
         Reset the point back to the geometric origin: 0, 0
         """
-        self.move(0, 0)
+        self.move(0.0, 0.0)
 
-    def calculate_distance(self, other: "Point") -> float:
+    def calculate_distance(self, other: Point) -> float:
         """
         Calculate the Euclidean distance from this point
         to a second point passed as a parameter.
@@ -60,7 +60,7 @@ test_point_help = """
 Help on class Point in module point_4:
 <BLANKLINE>
 class Point(builtins.object)
- |  Point(x: float = 0, y: float = 0) -> None
+ |  Point(x: 'float' = 0.0, y: 'float' = 0.0) -> 'None'
  |
  |  Represents a point in two-dimensional geometric coordinates
  |
@@ -71,7 +71,7 @@ class Point(builtins.object)
  |
  |  Methods defined here:
  |
- |  __init__(self, x: float = 0, y: float = 0) -> None
+ |  __init__(self, x: 'float' = 0.0, y: 'float' = 0.0) -> 'None'
  |      Initialize the position of a new point. The x and y
  |      coordinates can be specified. If they are not, the
  |      point defaults to the origin.
@@ -79,20 +79,20 @@ class Point(builtins.object)
  |      :param x: float x-coordinate
  |      :param y: float x-coordinate
  |
- |  calculate_distance(self, other: 'Point') -> float
+ |  calculate_distance(self, other: 'Point') -> 'float'
  |      Calculate the Euclidean distance from this point
  |      to a second point passed as a parameter.
  |
  |      :param other: Point instance
  |      :return: float distance
  |
- |  move(self, x: float, y: float) -> None
+ |  move(self, x: 'float', y: 'float') -> 'None'
  |      Move the point to a new location in 2D space.
  |
  |      :param x: float x-coordinate
  |      :param y: float x-coordinate
  |
- |  reset(self) -> None
+ |  reset(self) -> 'None'
  |      Reset the point back to the geometric origin: 0, 0
  |
  |  ----------------------------------------------------------------------

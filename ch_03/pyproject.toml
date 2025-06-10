@@ -20,7 +20,7 @@ deps = ["pytest", "ruff"]
 commands = [
   # ["pytest"],  # no tests directory
   ["pytest", "--doctest-modules", "-vv", "src"],
-  ["ruff", "check", "--ignore", "E402"],
+  ["ruff", "check", "--ignore", "E402,F811"],
 ]
 
 [tool.tox.env.type]
@@ -34,3 +34,6 @@ commands = [
 [tool.pyright]
 reportUnusedExpression = false
 include = ["src"]
+
+[tool.mypy]
+files = ["src"]

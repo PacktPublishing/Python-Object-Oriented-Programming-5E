@@ -28,7 +28,7 @@ class Contact:
         self.all_contacts.append(self)
 
     def __repr__(self) -> str:
-        return f"{self.__class__.__name__}(" f"{self.name!r}, {self.email!r}" f")"
+        return f"Contact(" f"{self.name!r}, {self.email!r}" f")"
 
 
 ## Multiple inheritance -- working version

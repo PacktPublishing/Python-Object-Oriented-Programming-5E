@@ -3,12 +3,12 @@ Python 3 Object-Oriented Programming 4th ed.
 
 Chapter 3, When Objects Are Alike
 """
-
+from __future__ import annotations
 from typing import ClassVar
 
 
 class Contact:
-   all_contacts: ClassVar[list["Contact"]] = []
+   all_contacts: ClassVar[list[Contact]] = []
 
    def __init__(self, name: str, email: str) -> None:
        self.name = name

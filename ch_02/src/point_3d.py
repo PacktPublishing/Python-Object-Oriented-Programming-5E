@@ -8,20 +8,24 @@ import math
 
 
 class Point:
+    def __init__(self, x: float = 0.0, y: float = 0.0) -> None:
+        self.move(x, y)
+
     def move(self, x: float, y: float) -> None:
         self.x = x
         self.y = y
 
     def reset(self) -> None:
-        self.move(0.0, 0.0)
+        self.move(0, 0)
 
     def calculate_distance(self, other: Point) -> float:
         return math.hypot(self.x - other.x, self.y - other.y)
 
 
+
 test_point = """
->>> point1 = Point()
->>> point2 = Point()
+>>> point1 = Point(0, 0)
+>>> point2 = Point(0, 0)
 
 >>> point1.reset()
 >>> point2.move(5, 0)
@@ -38,16 +42,15 @@ test_point = """
 """
 
 
-test_partial = """
->>> point = Point()
->>> point.x = 5
->>> print(point.x)
-5
->>> print(point.y)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-AttributeError: 'Point' object has no attribute 'y'
-"""
+test_init = """
+>>> point = Point(3, 5)
+>>> print(point.x, point.y)
+3 5
 
+>>> point = Point()
+>>> print(point.x, point.y)
+0.0 0.0
+
+"""
 
 __test__ = {name: case for name, case in globals().items() if name.startswith("test_")}

@@ -3,13 +3,14 @@ Python 3 Object-Oriented Programming 4th ed.
 
 Chapter 3, When Objects Are Alike
 """
-
 ## Extending built-ins
 
+from __future__ import annotations
+
 class ContactList(list["Contact"]):
-    def search(self, name: str) -> list["Contact"]:
+    def search(self, name: str) -> list[Contact]:
         """All Contacts with name that contains the name parameter's value."""
-        matching_contacts: list["Contact"] = []
+        matching_contacts: list[Contact] = []
         for contact in self:
             if name in contact.name:
                 matching_contacts.append(contact)
@@ -51,6 +52,9 @@ Needed to reset the class *after* a previous test:
 >>> c1 = Contact("John A", "johna@example.net")
 >>> c2 = Contact("John B", "johnb@sloop.net")
 >>> c3 = Contact("Jenna C", "cutty@sark.io")
+>>> Contact.all_contacts.search('John')
+[Contact('John A', 'johna@example.net'), Contact('John B', 'johnb@sloop.net')]
+
 >>> [c.name for c in Contact.all_contacts.search('John')]
 ['John A', 'John B']
 """
@@ -106,6 +110,29 @@ Friend('Dusty', 'Dusty@private.com')
 Friend_S('Dusty', 'Dusty@private.com')
 """
 
+
+class Friend_S2(Contact):
+    def __init__(self, name: str, email: str, phone: str) -> None:
+        super().__init__(name, email)
+        self.phone = phone
+
+    def __repr__(self) -> str:
+        return (
+            f"{self.__class__.__name__}("
+            f"{self.name!r}, {self.email!r}, {self.phone!r}"
+            f")"
+        )
+
+test_friends_2 = """
+>>> f = Friend("Dusty", "Dusty@private.com", "555-1212")
+>>> f
+Friend('Dusty', 'Dusty@private.com')
+
+>>> fs = Friend_S2("Dusty", "Dusty@private.com", "555-1212")
+>>> fs
+Friend_S2('Dusty', 'Dusty@private.com', '555-1212')
+"""
+
 ## Multiple Inheritance
 
 
@@ -140,7 +167,13 @@ Sending mail to self.email='johnb@sloop.net'
 
 
 class AddressHolder:
-    def __init__(self, street: str, city: str, state: str, code: str) -> None:
+    def __init__(
+            self,
+            street: str,
+            city: str,
+            state: str,
+            code: str
+    ) -> None:
         self.street = street
         self.city = city
         self.state = state

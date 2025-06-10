@@ -40,8 +40,8 @@ exclude = [
 ]
 
 [tool.mypy]
+files = ["src"]
 exclude = [
     'bad_hints\.py$',
     'point_0\.py$',
-    'ecommerce/*',
 ]
