@@ -9,11 +9,10 @@ class EvenOnly(list[int]):
     def append(self, value: int) -> None:
         match value:
             case int():
-                pass
+                if value % 2 != 0:
+                    raise ValueError("Only even numbers can be added")
             case _:
                 raise TypeError("Only integers can be added")
-        if value % 2 != 0:
-            raise ValueError("Only even numbers can be added")
         super().append(value)
 
 
@@ -41,6 +40,7 @@ To be complete, we need to make sure these don't work, also.
 >>> e
 [5, 3, 2, 3, 2, 3, 4]
 """
+
 
 from typing import NoReturn
 
