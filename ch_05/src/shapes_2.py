@@ -71,11 +71,10 @@ class Polygon_3:
             vertices: Iterable[Point_or_Tuple] | None = None
     ) -> None:
         self.vertices: list[Point] = []
-        if vertices:
-            for pt_tup in vertices:
-                self.vertices.append(
-                    self.make_point(pt_tup)
-                )
+        for pt_tup in vertices or []:
+            self.vertices.append(
+                self.make_point(pt_tup)
+            )
 
     @staticmethod
     def make_point(item: Point_or_Tuple) -> Point:
@@ -92,6 +91,7 @@ class Polygon_3:
     def perimeter(self) -> float:
         pairs = zip(self.vertices, self.vertices[1:] + self.vertices[:1])
         return sum(p1.distance(p2) for p1, p2 in pairs)
+
 
 
 test_polygon_3 = """
