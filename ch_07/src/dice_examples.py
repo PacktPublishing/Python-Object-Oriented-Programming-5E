@@ -72,7 +72,7 @@ def roll_ndice2(
 @overload
 def roll_ndice2(
     dice: int | None = None,
-    faces: int = 2
+    faces: int | None = None
 ) -> list[int]:
     ...
 

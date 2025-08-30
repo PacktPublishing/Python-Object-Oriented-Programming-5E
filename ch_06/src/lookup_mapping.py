@@ -81,10 +81,10 @@ class Lookup(Mapping[Comparable, Any]):
 test_lookup = """
 >>> x = Lookup(
 ...     [
-...         ["z", "Zillah"],
-...         ["a", "Amy"],
-...         ["c", "Clara"],
-...         ["b", "Basil"],
+...         ("z", "Zillah"),
+...         ("a", "Amy"),
+...         ("c", "Clara"),
+...         ("b", "Basil"),
 ...     ]
 ... )
 
@@ -95,10 +95,10 @@ test_lookup = """
 test_not_a_dict = """
 >>> x = Lookup(
 ...     [
-...         ["z", "Zillah"],
-...         ["a", "Amy"],
-...         ["c", "Clara"],
-...         ["b", "Basil"],
+...         ("z", "Zillah"),
+...         ("a", "Amy"),
+...         ("c", "Clara"),
+...         ("b", "Basil"),
 ...     ]
 ... )
 

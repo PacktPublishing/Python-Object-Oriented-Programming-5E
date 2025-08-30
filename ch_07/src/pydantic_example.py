@@ -35,7 +35,7 @@ Traceback (most recent call last):
 pydantic_core._pydantic_core.ValidationError: 1 validation error for Result
 exit_code
   Value error, must be non-negative [type=value_error, input_value=-2, input_type=int]
-    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+    For further information visit https://errors.pydantic.dev/2.11/v/value_error
 
 """
 
@@ -60,7 +60,7 @@ Traceback (most recent call last):
 pydantic_core._pydantic_core.ValidationError: 1 validation error for Result2
 exit_code
   Input should be greater than or equal to 0 [type=greater_than_equal, input_value=-2, input_type=int]
-    For further information visit https://errors.pydantic.dev/2.10/v/greater_than_equal
+    For further information visit https://errors.pydantic.dev/2.11/v/greater_than_equal
 
 """
 
