@@ -60,4 +60,19 @@ Sarah Brightman plays good music
 
 """
 
+test_set_extra = """
+>>> song_library = [
+...     ("Phantom Of The Opera", "Sarah Brightman"),
+...     ("Knocking On Heaven's Door", "Guns N' Roses"),
+...     ("Captain Nemo", "Sarah Brightman"),
+...     ("Patterns In The Ivy", "Opeth"),
+...     ("November Rain", "Guns N' Roses"),
+...     ("Beautiful", "Sarah Brightman"),
+...     ("Mal's Song", "Vixy and Tony"),
+... ]
+>>> artists = set(artist for _, artist in song_library)
+>>> artists == {'Opeth', "Guns N' Roses", 'Vixy and Tony', 'Sarah Brightman'}
+True
+"""
+
 __test__ = {name: case for name, case in globals().items() if name.startswith("test_")}

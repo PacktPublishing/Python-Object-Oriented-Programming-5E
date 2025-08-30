@@ -30,7 +30,7 @@ description = "run type check on code base"
 deps = ["pyright", "mypy"]
 commands = [
   ["pyright", "src"],
-  ["mypy", "src"],
+  ["mypy", "--strict", "src", ],
 ]
 
 [tool.mypy]
