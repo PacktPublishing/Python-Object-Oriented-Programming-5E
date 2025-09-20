@@ -57,7 +57,7 @@ test_default_params = """
 
 
 def latitude_dms(
-    deg: float, min: float, sec: float = 0.0, dir: Optional[str] = None
+    deg: float, min: float, sec: float = 0.0, dir: str | None = None
 ) -> str:
     if dir is None:
         dir = "N"

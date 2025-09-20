@@ -35,10 +35,10 @@ test_packing = """
 
 """
 
+from collections.abc import Callable
+from dataclasses import dataclass, field
 import heapq
 import time
-from typing import Optional, Callable
-from dataclasses import dataclass, field
 
 type Callback = Callable[[int], None]
 
@@ -59,7 +59,7 @@ class Task:
     delay: int = field(default=0, compare=False)
     limit: int = field(default=1, compare=False)
 
-    def repeat(self, current_time: int) -> Optional["Task"]:
+    def repeat(self, current_time: int) -> "Task | None":
         """
         If the limit is > 1, this task can be run again.
         Create a new Task object with the time at which it should be repeated.
