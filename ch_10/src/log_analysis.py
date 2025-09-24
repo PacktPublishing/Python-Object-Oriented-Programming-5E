@@ -29,26 +29,26 @@ from pathlib import Path
 from typing import Match, cast
 
 
-def extract_and_parse_1(full_log_path: Path, warning_log_path: Path) -> None:
-    with warning_log_path.open("w", newline="") as target:
+def extract_and_parse_1(source_log_path: Path, warning_tab_path: Path) -> None:
+    with warning_tab_path.open("w", newline="") as target:
         writer = csv.writer(target, delimiter="\t")
         pattern = re.compile(r"(\w\w\w \d\d, \d\d\d\d \d\d:\d\d:\d\d) (\w+) (.*)")
-        with full_log_path.open() as source:
+        with source_log_path.open() as source:
             for line in source:
-                if "WARN" in line:
-                    line_groups = cast(Match[str], pattern.match(line)).groups()
-                    writer.writerow(line_groups)
+                if line_match := pattern.match(line):
+                    line_groups = line_match.groups()
+                    if "WARN" in line_groups[1]:
+                        writer.writerow(line_groups)
 
 
 test_extract_and_parse_1 = """
 >>> from pathlib import Path
 >>> full_log_path = Path.cwd() / "data" / "sample.log"
->>> warning_log_path = Path.cwd() / "data" / "warnings1.tab"
->>> extract_and_parse_1(full_log_path, warning_log_path)
+>>> warning_tab_path = Path.cwd() / "data" / "warnings1.tab"
+>>> extract_and_parse_1(full_log_path, warning_tab_path)
 
->>> list(filter(None, warning_log_path.read_text().splitlines()))
+>>> list(filter(None, warning_tab_path.read_text().splitlines()))
 ['Apr 05, 2021 20:03:53\\tWARNING\\tThis is a warning. It could be serious.', 'Apr 05, 2021 20:03:59\\tWARNING\\tAnother warning sent.', 'Apr 05, 2021 20:04:35\\tWARNING\\tWarnings should be heeded.', 'Apr 05, 2021 20:04:41\\tWARNING\\tWatch for warnings.']
-
 """
 
 import csv
@@ -68,13 +68,13 @@ class WarningReformat(Iterator[tuple[str, ...]]):
 
     def __next__(self) -> tuple[str, ...]:
         line = self.insequence.readline()
-        while line and "WARN" not in line:
+        while line:
+            if match := self.pattern.match(line):
+                groups = match.groups()
+                if "WARN" in groups[1]:
+                    return groups
             line = self.insequence.readline()
-        if not line:
-            raise StopIteration
-        else:
-            return tuple(cast(Match[str], self.pattern.match(line)).groups())
-
+        raise StopIteration
 
 def extract_and_parse_2(full_log_path: Path, warning_log_path: Path) -> None:
     with warning_log_path.open("w", newline="") as target:
