@@ -304,7 +304,7 @@ class Client:
     def __init__(self, buffer: Buffer) -> None:
         self.buffer = buffer
 
-    def scan(self) -> None:
+    def scan(self) -> Iterator[Message | None]:
         end = 0
         while True:
             try:
@@ -312,8 +312,7 @@ class Client:
                 header = self.buffer[start + 1 : start + 6]
                 m = message_factory(header)
                 if m:
-                    fix = m.from_buffer(self.buffer, start).get_fix()
-                    print(fix)
+                    yield m.from_buffer(self.buffer, start)
                     end = cast(int, m.end)
                 else:
                     star = self.buffer.index(ord(b"*"), end)
@@ -341,7 +340,8 @@ test_client = """
 b'$'
 >>> buffer[2:7]
 b'GPGGA'
->>> c.scan()
+>>> for m in c.scan():
+...     print(m.get_fix())
 (37°23.2475N, 121°58.3416W)
 (37°23.2475N, 121°58.3416W)
 (37°23.2475N, 121°58.3416W)

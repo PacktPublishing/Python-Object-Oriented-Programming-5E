@@ -26,49 +26,24 @@ def db_preparation(db_name: str = "sales.db") -> sqlite3.Connection:
         )
         """
     )
-
     conn.execute(
         """
         DELETE FROM Sales
         """
     )
-
-    conn.execute(
+    values = [
+        ('Tim', 16000, 2010, 'Honda Fit', 'true'),
+        ('Tim', 9000, 2006, 'Ford Focus', 'false'),
+        ('Hannah', 8000, 2004, 'Dodge Neon', 'false'),
+        ('Hannah', 28000, 2009, 'Ford Mustang', 'true'),
+        ('Hannah', 50000, 2010, 'Lincoln Navigator', 'true'),
+        ('Jason', 20000, 2008, 'Toyota Prius', 'false')
+    ]
+    conn.executemany(
         """
-        INSERT INTO Sales 
-        VALUES('Tim', 16000, 2010, 'Honda Fit', 'true')
-        """
-    )
-    conn.execute(
-        """
-        INSERT INTO Sales 
-        VALUES('Tim', 9000, 2006, 'Ford Focus', 'false')
-        """
-    )
-    conn.execute(
-        """
-        INSERT INTO Sales 
-        VALUES('Hannah', 8000, 2004, 'Dodge Neon', 'false')
-        """
-    )
-    conn.execute(
-        """
-        INSERT INTO Sales 
-        VALUES('Hannah', 28000, 2009, 'Ford Mustang', 'true')
-        """
-    )
-    conn.execute(
-        """
-        INSERT INTO Sales 
-        VALUES('Hannah', 50000, 2010, 'Lincoln Navigator', 'true')
-        """
-    )
-    conn.execute(
-        """
-        INSERT INTO Sales 
-        VALUES('Jason', 20000, 2008, 'Toyota Prius', 'false')
-        """
-    )
+            INSERT INTO Sales VALUES (?,?,?,?,?)
+        """,
+        values)
     conn.commit()
     return conn
 

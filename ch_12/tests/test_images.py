@@ -10,9 +10,9 @@ import pytest
 import images
 
 def test_jar_finding():
-    """Highly localized to author's environment."""
+    """Requires the plantuml download."""
     p = images.PlantUML(plantjar="plantuml-1.2024.7.jar")
-    assert p.plantjar == (Path.cwd().parent.parent / "plantuml-1.2024.7.jar")
+    assert p.plantjar.exists()
 
 @pytest.fixture
 def mock_files(tmp_path):

@@ -18,9 +18,8 @@ env_list = ["3.13", "3.12", "type"]
 description = "Run test suite under {base_python}"
 deps = ["pytest", "ruff"]
 set_env = {PYTHONHASHSEED = "42"}
-
 commands = [
-  ["pytest", "-v"],
+  ["pytest", "-v", "tests"],
   ["pytest", "--doctest-modules", "-vv", "src"],
   ["ruff", "check", "--ignore", "E402,F811"],
 ]
@@ -32,6 +31,14 @@ commands = [
   ["pyright", "src"],
   ["mypy", "src"],
 ]
+
+[tool.tox.env.bench]
+description = "run memory benchmark"
+deps = ["pytest"]
+commands = [
+  ["pytest", "benches"],
+]
+
 
 [tool.mypy]
 show_error_codes = true

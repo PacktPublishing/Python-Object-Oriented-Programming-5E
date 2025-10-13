@@ -44,20 +44,17 @@ import subprocess
 
 
 class PlantUML:
-    conda_base = Path.home() / "miniconda3" / "envs"
-    home_venv_base = Path.home() / "venv"
-    project_venv_base = Path.cwd() / ".venv"
+    local_dir = Path.cwd()
 
     def __init__(
         self,
         plantjar: str | Path = "plantuml-1.2024.7.jar",
-        venv_name: str = "CaseStudy"
+        venv_name: str = ".venv"
     ) -> None:
         def find_first(name: str | Path) -> Path:
             places = [
-                self.conda_base / venv_name,
-                self.home_venv_base / venv_name,
-                self.project_venv_base / venv_name
+                self.local_dir,
+                self.local_dir / venv_name,
             ]
             places += Path.cwd().parents
             for place in places:
@@ -75,10 +72,13 @@ class PlantUML:
 
     def process(self, source: Path) -> None:
         env: dict[str, str] = {
-            # "GRAPHVIZ_DOT": str(path/to/graphviz/dot),
+            # Rarely needed...
+            # "GRAPHVIZ_DOT": str(Path("/")/"to"/"graphviz"/"dot"),
         }
         command = ["java", "-jar", str(self.plantjar), "-progress", str(source)]
         subprocess.run(command, env=env, check=True)
+
+
 
 
 class GenerateImages:
