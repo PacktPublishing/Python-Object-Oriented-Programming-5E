@@ -8,10 +8,10 @@ import asyncio.exceptions
 import json
 from pathlib import Path
 import pickle
-import signal
 import struct
-import sys
 from typing import TextIO
+
+
 
 
 TARGET: TextIO
@@ -61,10 +61,6 @@ async def main(host: str, port: int) -> None:
         port=port,
     )
 
-    if sys.platform != "win32":
-        loop = asyncio.get_running_loop()
-        loop.add_signal_handler(signal.SIGTERM, server.close)
-
     if server.sockets:
         addr = server.sockets[0].getsockname()
         print(f"Serving on {addr}")
@@ -73,19 +69,7 @@ async def main(host: str, port: int) -> None:
 
     async with server:
         await server.serve_forever()
-
-
-if sys.platform == "win32":
-    from types import FrameType
-
-    def close_server(signum: int, frame: FrameType) -> None:
-        # print(f"Signal {signum}")
-        server.close()
-
-    signal.signal(signal.SIGINT, close_server)
-    signal.signal(signal.SIGTERM, close_server)
-    signal.signal(signal.SIGABRT, close_server)
-    signal.signal(signal.SIGBREAK, close_server)
+    server.close_clients()
 
 
 if __name__ == "__main__":

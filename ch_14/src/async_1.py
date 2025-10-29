@@ -7,7 +7,7 @@ import asyncio
 import random
 
 
-async def random_sleep(counter: float) -> None:
+async def random_sleep(counter: int) -> None:
     delay = random.random() * 5
     print(f"{counter} sleeps for {delay:.2f} seconds")
     await asyncio.sleep(delay)

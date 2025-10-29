@@ -100,7 +100,7 @@ if __name__ == "__main__":
         start = time.perf_counter()
         count = 0
         for line in ds.search(target):
-            # print(line)
+            # print(line)  # If you want to see what's going on
             count += 1
         milliseconds = 1000 * (time.perf_counter() - start)
         print(

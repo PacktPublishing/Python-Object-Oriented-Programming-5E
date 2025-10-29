@@ -81,10 +81,7 @@ async def task_main() -> None:
     forecasts = [MarineWX(z) for z in ZONES]
 
     await asyncio.gather(
-        *(
-            asyncio.create_task(f.run())
-            for f in forecasts
-        )
+        *(f.run() for f in forecasts)
     )
 
     for f in forecasts:
